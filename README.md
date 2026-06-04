@@ -45,6 +45,8 @@ External APIs (Gemini, GitHub, OpenWeather, NewsAPI)
 - **Auth** — JWT, bcryptjs
 - **AI** — Google Gemini API (gemini-1.5-flash)
 - **APIs** — GitHub REST API, OpenWeatherMap, NewsAPI
+## 🌐 Live Demo
+👉 [https://campuspulse-topaz.vercel.app](https://campuspulse-topaz.vercel.app)
 
 ## 👩‍💻 Author
 **Divya Barnwal** — B.Tech CSE @ SRM IST Delhi NCR  
