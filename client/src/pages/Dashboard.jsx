@@ -48,7 +48,7 @@ const Dashboard = () => {
       <nav className="navbar">
         <div className="navbar-brand">
           <Activity className="logo-icon" style={{ strokeWidth: 2.5, color: '#38bdf8' }} />
-          <span>CampusPulse</span>
+          <span>PlaceMate</span>
         </div>
 
         <div className="navbar-links">

@@ -53,7 +53,7 @@ const Register = () => {
         <div className="auth-header">
           <div className="auth-logo">
             <Activity className="logo-icon" style={{ strokeWidth: 2.5, color: '#38bdf8' }} />
-            <span>CampusPulse</span>
+            <span>PlaceMate</span>
           </div>
           <p className="auth-subtitle">Initialize your career advisor profile</p>
         </div>

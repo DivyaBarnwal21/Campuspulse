@@ -54,10 +54,10 @@ const Login = () => {
       <div className="auth-card">
         <div className="auth-header">
           <div className="auth-logo">
-            <Activity className="logo-icon" style={{ strokeWidth: 2.5, color: '#38bdf8' }} />
-            <span>CampusPulse</span>
+              <Activity className="logo-icon" style={{ strokeWidth: 2.5, color: '#38bdf8' }} />
+            <span>PlaceMate</span>
           </div>
-          <p className="auth-subtitle">AI College Career Assistant</p>
+          <p className="auth-subtitle">AI Career Assistant for Students</p>
         </div>
 
         {error && (
