@@ -4,6 +4,9 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const authRoutes = require('./routes/authRoutes');
 const dashboardRoutes = require('./routes/dashboardRoutes');
+const trackerRoutes = require('./routes/trackerRoutes');
+const resumeRoutes = require('./routes/resumeRoutes');
+const skillsRoutes = require('./routes/skillsRoutes');
 const errorHandler = require('./utils/errorHandler');
 
 // Initialize express app
@@ -36,9 +39,9 @@ app.get('/', (req, res) => {
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/dashboard', dashboardRoutes);
-app.use('/api/tracker', require('./routes/trackerRoutes'));
-app.use('/api/resume', require('./routes/resumeRoutes'));
-app.use('/api/skills', require('./routes/skillsRoutes'));
+app.use('/api/tracker', trackerRoutes);
+app.use('/api/resume', resumeRoutes);
+app.use('/api/skills', skillsRoutes);
 
 // Centralized Error Handler (Must be registered last)
 app.use(errorHandler);

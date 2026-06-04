@@ -271,9 +271,10 @@ const ResumeChecker = () => {
               <div className="dash-card" style={{ height: 'auto', gap: '1.5rem', animation: 'fadeIn 0.6s ease-out' }}>
                 {/* Score section */}
                 <div className="ats-score-section">
-                  <div className="ats-score-gauge" style={{ '--score-angle': `${(results.atsScore / 100) * 360}deg` }}>
-                    <span className="ats-score-value">{results.atsScore}</span>
+                  <div className="progress-bar" style={{ marginBottom: '0.5rem' }}>
+                    <div className="filled" style={{ width: `${results.atsScore}%` }}></div>
                   </div>
+                  <span className="ats-score-value" style={{ fontSize: '1.5rem', fontWeight: 600, color: 'var(--color-primary)' }}>{results.atsScore}%</span>
                   <div>
                     <h3 className="ats-score-title">ATS Match Coefficient</h3>
                     <p className="ats-score-desc">

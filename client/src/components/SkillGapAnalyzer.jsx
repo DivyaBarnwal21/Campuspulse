@@ -9,6 +9,12 @@ const SkillGapAnalyzer = () => {
   const [error, setError] = useState('');
   const [analysis, setAnalysis] = useState(null);
 
+  const cleanText = (text) => {
+    return text.replace(/\*\*(.*?)\*\*/g, '$1')
+               .replace(/\*(.*?)\*/g, '$1')
+               .replace(/^\d+\.\s/, '');
+  };
+
   const handleAnalyze = async (e) => {
     e.preventDefault();
     if (!skills.trim() || !target.trim()) {
@@ -151,7 +157,7 @@ const SkillGapAnalyzer = () => {
               {analysis.roadmap && analysis.roadmap.map((step, idx) => (
                 <li className="roadmap-step" key={idx}>
                   <span className="roadmap-num">{idx + 1}</span>
-                  <span style={{ color: 'var(--text-main)' }}>{step}</span>
+                  <span style={{ color: 'var(--text-main)' }}>{cleanText(step)}</span>
                 </li>
               ))}
             </ol>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import api from '../services/api';
-import { Github, Search, Star, ExternalLink, AlertCircle } from 'lucide-react';
+import { Github, Search, Star, ExternalLink, AlertCircle, Folder } from 'lucide-react';
 
 const GitHubCard = () => {
   const [username, setUsername] = useState(() => {
@@ -98,7 +98,7 @@ const GitHubCard = () => {
       {!loading && !error && repos.length > 0 && (
         <div className="card-scroll-area">
           <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginBottom: '0.5rem' }}>
-            Viewing repositories for <span style={{ color: '#38bdf8', fontWeight: 600 }}>@{username}</span>:
+            Viewing repositories for <span style={{ fontSize: '0.65rem', padding: '0.1rem 0.4rem', background: 'rgba(var(--color-warning-rgb), 0.2)', border: '1px solid rgba(var(--color-warning-rgb), 0.3)', borderRadius: '10px', color: 'var(--color-warning)', verticalAlign: 'middle' }}>@{username}</span>:
           </div>
           {repos.map((repo, idx) => (
             <div className="repo-item" key={repo.name + idx}>
@@ -110,12 +110,13 @@ const GitHubCard = () => {
                   className="repo-name-link"
                 >
                   <span style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                  <Folder size={14} style={{ display: 'inline', marginRight: '0.25rem', color: 'var(--color-primary)' }} />
                     {repo.name}
                     <ExternalLink size={12} style={{ opacity: 0.6 }} />
                   </span>
                 </a>
                 <span className="repo-stars">
-                  <Star size={12} fill="#fbbf24" style={{ stroke: '#fbbf24' }} />
+                  <Star size={12} style={{ color: 'var(--color-warning)' }} />
                   {repo.stars}
                 </span>
               </div>

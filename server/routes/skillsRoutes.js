@@ -1,10 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const { analyzeResume } = require('../controllers/resumeController');
+const { analyzeSkills } = require('../controllers/skillsController');
 const { protect } = require('../middleware/authMiddleware');
 
-router.use(protect);
-
-router.post('/analyze', analyzeResume);
+router.post('/analyze', protect, analyzeSkills);
 
 module.exports = router;

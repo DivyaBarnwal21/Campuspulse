@@ -3,8 +3,6 @@ const router = express.Router();
 const { analyzeResume } = require('../controllers/resumeController');
 const { protect } = require('../middleware/authMiddleware');
 
-router.use(protect);
-
-router.post('/analyze', analyzeResume);
+router.post('/analyze', protect, analyzeResume);
 
 module.exports = router;
