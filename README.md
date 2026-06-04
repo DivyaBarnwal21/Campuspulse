@@ -1,5 +1,5 @@
 
-# CampusPulse 🎓
+# PlaceMate 🎓
 > AI-powered personal career assistant for college students
 
 ![Status](https://img.shields.io/badge/Status-In%20Development-yellow)
@@ -12,7 +12,7 @@ Every college student during placement season juggles 20+ company
 applications across spreadsheets, forgets deadlines, and has no idea
 if their resume will pass ATS filters. CampusPulse solves this.
 
-## 🚀 What is CampusPulse?
+## 🚀 What is PlaceMate?
 A full-stack AI-powered career dashboard built specifically for Indian
 college students — combining resume intelligence, application tracking,
 and skill gap analysis in one authenticated platform.
